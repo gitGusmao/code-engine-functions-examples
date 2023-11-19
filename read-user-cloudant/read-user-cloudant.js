@@ -4,7 +4,7 @@ require("dotenv").config();
 
 const client = CloudantV1.newInstance();
 
-async function readUser(jsonString) {
+async function main(jsonString) {
   const jsonObject = JSON.parse(jsonString);
 
   const dbName = jsonObject["dbName"];
@@ -40,13 +40,4 @@ async function readUser(jsonString) {
   return response;
 }
 
-module.exports.readUser = readUser;
-
-// if (process.argv.length > 2) {
-//   const jsonString = process.argv[2];
-//   readUser(jsonString);
-// } else {
-//   console.error(
-//     "Informar dbName e document"
-//   );
-// }
+module.exports.main = main;

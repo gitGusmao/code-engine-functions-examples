@@ -1,8 +1,13 @@
 {
-  "name": "function",
+  "name": "read-user-cloudant",
   "version": "1.0.0",
+  "description": "",
   "main": "main.js",
+  "author": "Leonardo Gusmão",
+  "license": "ISC",
   "dependencies": {
     "lorem-ipsum": "2.0.8"
   }
 }
+
+

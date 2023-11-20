@@ -7,9 +7,10 @@ async function main(args) {
   const document = args.document;
 
   if (dbName == undefined || document == undefined)
-    return res.status(404).send({
-      message: "Error",
-    });
+    return {
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: "Informar dbName e document",
+    };
 
   let response;
 

@@ -6,8 +6,6 @@
   "author": "Leonardo Gusmão",
   "license": "ISC",
   "dependencies": {
-    "lorem-ipsum": "2.0.8"
+    "@ibm-cloud/cloudant": "^0.7.2"
   }
 }
-
-

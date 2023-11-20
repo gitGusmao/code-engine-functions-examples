@@ -26,6 +26,8 @@ async function main(args) {
     })
     .then((res) => {
       res = res.result;
+      response = res;
+
       if (res.docs.length > 0) response = res.docs[0];
     })
     .catch((err) => {

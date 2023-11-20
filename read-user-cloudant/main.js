@@ -31,9 +31,14 @@ async function main(args) {
   //     response = err.error;
   //   });
 
+  const obj = {
+    name: "Leonardo",
+    dbName,
+    document,
+  };
   return {
     headers: { "Content-Type": "application/json;charset=utf-8" },
-    body: dbName + document,
+    body: obj,
   };
 }
 

@@ -1,13 +1,12 @@
-const { CloudantV1 } = require("@ibm-cloud/cloudant");
+// const { CloudantV1 } = require("@ibm-cloud/cloudant");
 
-require("dotenv").config();
+// require("dotenv").config();
 
-const client = CloudantV1.newInstance();
+// const client = CloudantV1.newInstance();
 
 async function main(params) {
-
-  console.log(params)
-  console.log('i')
+  console.log(params);
+  console.log("i");
   // const jsonObject = JSON.parse(jsonString);
 
   // const dbName = jsonObject["dbName"];
@@ -41,6 +40,10 @@ async function main(params) {
   //   });
 
   // console.log(response);
-  // return response;
+
+  return {
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: 'po',
+  };
 }
 module.exports.main = main;

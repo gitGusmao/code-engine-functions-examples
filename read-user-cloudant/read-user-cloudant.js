@@ -4,40 +4,43 @@ require("dotenv").config();
 
 const client = CloudantV1.newInstance();
 
-async function main(jsonString) {
-  const jsonObject = JSON.parse(jsonString);
+async function main(params) {
 
-  const dbName = jsonObject["dbName"];
-  const document = jsonObject["document"];
+  console.log(params)
+  console.log('i')
+  // const jsonObject = JSON.parse(jsonString);
 
-  console.log(dbName, document);
+  // const dbName = jsonObject["dbName"];
+  // const document = jsonObject["document"];
 
-  if (dbName == undefined || document == undefined)
-    return res.status(404).send({
-      message: "Error",
-    });
+  // console.log(dbName, document);
 
-  let response;
+  // if (dbName == undefined || document == undefined)
+  //   return res.status(404).send({
+  //     message: "Error",
+  //   });
 
-  await client
-    .postFind({
-      db: dbName,
-      limit: 1,
-      selector: {
-        document: {
-          $eq: document,
-        },
-      },
-    })
-    .then((res) => {
-      res = res.result;
-      if (res.docs.length > 0) response = res.docs[0];
-    })
-    .catch((err) => {
-      response = err.error;
-    });
+  // let response;
 
-  return response;
+  // await client
+  //   .postFind({
+  //     db: dbName,
+  //     limit: 1,
+  //     selector: {
+  //       document: {
+  //         $eq: document,
+  //       },
+  //     },
+  //   })
+  //   .then((res) => {
+  //     res = res.result;
+  //     if (res.docs.length > 0) response = res.docs[0];
+  //   })
+  //   .catch((err) => {
+  //     response = err.error;
+  //   });
+
+  // console.log(response);
+  // return response;
 }
-
 module.exports.main = main;
